@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    <title>HOME</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+    <style>
+    h3{
+        text-align: center;
+        font-family: "Britannic Bold";
+        background-color: gold;
+    }
+    p{
+        color: red;
+    }
+    </style>
+<h3>DURGASOFTWARE SOLUTIONS</h3>
+    <div class="container">
+    <div class="row">
+    <form method="post">
+        <div class="col-md-6">
+        <h4> Founder & CEO of Durgasoftware Solutions</h4>
+        <p> Mr N. Durga Prasad ( M.Tech), PostGraduate from Andhra University and then started working as Software Engineer from IBM.
+
+After few years of working found that there is a BIG GAP between what Corporates want and what candidate’s posses.
+
+After seeing this situation, Immediately he quit the Job and conducted a research across institutions, industry and students, for 8 months and realised students are gems, but lack of innovative things they failed, So he started “DURGA SOFTWARE SOLUTIONS” for very less price in the market and to enhance the quality of people in to Corporate field by giving best knowledge to students via teaching and skill development.
+
+After years of struggle, he was succeeded in that and giving Knowledge as well as innovative thoughts to enter in corporate field for lakhs of students in a span of 8 years and Now his dreams come true that his students enters in to the corners of whole world and became INDIA’S NO #1 in SOFTWARE TRAINNG INSTITUTE</p>
+        </div>
+        <div class="offset-md-8 col-md-6">
+            <img src="IMG.jpg" width="300" height="200" >
+        </div>
+    </form>
+    </div>
+    </div>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    <title>Durgasoft</title>
+     {% endblock %}
+</head>
+<style>
+    nav{
+        float: right;
+    }
+    hr{
+        margin-top: -10px;
+        border: 2px solid black;
+    }
+    #h11{
+        color: red;
+        text-align: center;
+        font-family: Bahnschrift;
+        background-color: cyan;
+    }
+    footer{
+        bottom: 1px;
+        position: fixed;
+        text-align: center;
+        border: 2px solid black;
+        width: 100%;
+        font-size: 40px;
+        font-family: Algerian;
+        background-color: fuchsia;
+    }
+    h4{
+        text-align: center;
+        font-family: "Britannic Bold";
+    }
+    a{
+        margin-right: 50px;
+        background-color: greenyellow;
+        text-decoration: red;
+        color: red;
+    }
+</style>
+<body>
+<nav>
+    <a href="/home/">HOME</a>
+    <a href="/aboutus/">ABOUT US</a>
+    <a href="/contact/">CONTACT</a>
+    <a href="/services/">SERVICES</a>
+    <a href="/gallery/">GALLERY</a>
+</nav>
+<br>
+<h1 id="h11">Welcome To Durgasoft</h1>
+<hr>
+{% block content %}
+{% endblock %}
+<footer> THANK YOU</footer>
+</body>
+</html>

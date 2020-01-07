@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>SERVICES</title>
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+    <style>
+    table{
+        width: 200px;
+        height: 100px;
+        border-collapse:collapse ;
+        margin: 10px;
+
+    }
+    th,td{
+        text-align: center;
+        padding: 15px 10px;
+        background-color: darkturquoise;
+        margin: auto;
+    }
+    th{
+        color: red;
+    background-color:chartreuse;
+    }
+    div{
+        text-align:right;
+
+
+    }
+    h4{
+        text-align: center;
+        font-family: "Britannic Bold";
+    }
+    .container{
+        text-align: center;
+    }
+    </style>
+<h4>Our Services</h4>
+    <div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-7">
+            {% csrf_token %}
+            {% if pdata %}
+            <table border="2px">
+            <thead>
+                <tr>
+                    <th>CNumber</th>
+                    <th>CName</th>
+                    <th>CFaculty</th>
+                    <th>CDuration</th>
+                    <th>CFees</th>
+                    <th>CContent</th>
+                </tr>
+            </thead>
+                {% for i in pdata %}
+                <tbody>
+                <tr>
+                    <td>{{ i.CNumber }}</td>
+                    <td>{{ i.CName }}</td>
+                    <td>{{ i.CFaculty }}</td>
+                    <td>{{ i.CDuration }}</td>
+                    <td>{{ i.CFees }}</td>
+                    <td>{{ i.CContent }}</td>
+                </tr>
+
+                </tbody>
+                {% endfor %}
+            </table>
+            {% endif %}
+        </div>
+    </div>
+    </div>
+{% endblock %}
+</body>
+</html>
